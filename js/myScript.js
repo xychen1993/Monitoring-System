@@ -66,9 +66,7 @@ $videoLink.click(function() {
 });
 
 function handler(e) {
-  var videoPath = this.getAttribute("name");
-  document.getElementById(this.getAttribute("name") + "source").setAttribute("src", "./video/" + videoPath);
-  document.getElementById(this.getAttribute("name")).load();
+  document.getElementById(this.getAttribute("name")).play();
 }
 
 
