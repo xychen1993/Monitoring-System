@@ -57,7 +57,7 @@ $.fn.extend({
 	scrollParent: function( includeHidden ) {
 		var position = this.css( "position" ),
 			excludeStaticParent = position === "absolute",
-			overflowRegex = includevisibility: hidden; ? /(auto|scroll|hidden)/ : /(auto|scroll)/,
+			overflowRegex = includeHidden ? /(auto|scroll|hidden)/ : /(auto|scroll)/,
 			scrollParent = this.parents().filter( function() {
 				var parent = $( this );
 				if ( excludeStaticParent && parent.css( "position" ) === "static" ) {
@@ -15816,7 +15816,7 @@ var effectExplode = $.effects.effect.explode = function( o, done ) {
 		show = mode === "show",
 
 		// show and then visibility:hidden the element before calculating offset
-		// offset = el.show().css( "visibility", "hidden" ).offset(),
+		offset = el.show().css( "visibility", "hidden" ).offset(),
 
 		// width and height of a piece
 		width = Math.ceil( el.outerWidth() / cells ),
