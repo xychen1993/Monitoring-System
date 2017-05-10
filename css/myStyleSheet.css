@@ -125,6 +125,8 @@
   background-color: white;
   padding: 0;
   height:450px;
+  overflow-x: scroll;
+  overflow-y: scroll;
 
 }
 

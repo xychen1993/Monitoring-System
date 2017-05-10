@@ -42,12 +42,11 @@ var $search = $("#search");
 var $form = $("#myForm");
 
 $(".videoList").empty();
-
 if (qVResult.length) {
-    console.log('qV: ', qVResult)
     for(i=0 ; i<qVResult.length ;i++){
-      $(".videoList").append("<li><a href=./video/lalala> lalala </a></li>");
+      //$(".videoList").append("<li><a href=./video/lalala> lalala </a></li>");
       $(".videoList").append("<li><a href='" +'./video/' + qVResult[i].fileName+ "'>" + qVResult[i].fileName+"</a></li>");
+      $(".videoFrame").append("<video width='40%' height='40%' controls poster='' id='myVideo'><source src=" + qVResult[i].fileName + " type='video/mp4' id='source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {
@@ -73,7 +72,7 @@ function handler(e) {
   video = document.querySelector("video");
   video.removeAttribute("poster");
   source = document.querySelectorAll("video source");
-  source.src =   videoPath;
+  source.src = videoPath;
   document.getElementById("source").setAttribute("src",source.src ) ;
   video.load();
   video.play();
@@ -113,129 +112,3 @@ for(var i in myDic){
     "</li>"
 );
 }
-
-
-// Date.prototype.addSeconds = function(secs) {
-//     var dat = new Date(this.valueOf())
-//     dat.setSeconds(dat.getSeconds() + secs);
-//     return dat;
-// }
-//
-//
-// function getDates(startDate, stopDate) {
-//     var dateArray = new Array();
-//     var currentDate = startDate;
-//
-//     while (currentDate <= stopDate) {
-//         dateArray.push( new Date (currentDate) )
-//         currentDate = currentDate.addSeconds(1);
-//     }
-//     return dateArray;
-// }
-//
-//
-// var padding = 10;
-//
-// var svg = d3.select(".graph")
-//           .append("svg");
-//
-// var w = $(".graph").width(),
-// h = $(".graph").height();
-//
-// svg.attr("width", w)
-//     .attr("height", h);
-//
-// console.log(qEResult);
-// var minDate = new Date(qEResult[0].startTime),
-// maxDate = new Date(qEResult[1].endTime);
-//
-// timeStamps = getDates(minDate, maxDate);
-//
-// var timeLength = timeStamps.length;
-// var dateObj = [];
-// var events = ["SIT", "WALK", "SLEEP"];
-// var sitCount = 0;
-// var walkCount = 0;
-// var sleepCount = 0;
-//
-// // console.log(myDic);
-// for(var i in myDic){
-// }
-//
-//
-//
-// for (var i = 0; i < timeLength; i++) {
-//     var start = new Date(qEResult[i].startTime),
-//     end = new Date(qEResult[i].endTime);
-//
-//     if (start <= timeStamps[i] && timeStamps[i] <= end) {
-//         var eventType;
-//         var date = {
-//             datetime : timeStamps[i],
-//             eventName : qEResult[i].event
-//         }
-//         // console.log(myDic[1]);
-//         for(var i = 0; i< events.length; i++){
-//           if(events[i] == date.eventName) {
-//             eventType = events[i];
-//             date[events[i]] = 1;
-//           }
-//           else{
-//             date[events[i]] = 0;
-//           }
-//         }
-//
-//         dateObj.push(date);
-//         accumulator(date, date[eventType]);
-//
-//     }
-// }
-//
-// function accumulator(date, eventType) {
-//   var i = 0;
-//   var sum = 0;
-//
-//   do {
-//       sum += dateObj[i][eventType];
-//       i++;
-//   } while (dateObj[i].datetime != date);
-//
-//   return sum;
-//
-// }
-//
-// var xScale = d3.time.scale()
-//     .domain([minDate, maxDate])
-//     .range([padding, w - padding]);
-//
-// var format = d3.time.format("%b %d %H %i %s");
-//
-// var xAxis = d3.svg.axis()
-//     .scale(xScale)
-//     .orient("bottom")
-//     .tickFormat(format)
-//     .ticks(d3.time.second, 5);
-//
-//
-//
-//
-//
-// function resizeGraph() {
-//     w = $(".graph").width();
-//     h = $(".graph").height();
-//     svg.attr("width", w)
-//     .attr("height", h);
-// }
-//
-// $(window).resize(function() {
-//     resizeGraph();
-//
-// });
-//
-//
-//
-//
-//
-//
-//
-//
