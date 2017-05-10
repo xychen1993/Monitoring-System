@@ -1,0 +1,35 @@
+<div class="apply" ng-controller='mangController as mang' >
+  <div class="apply-header">
+    Application management
+  </div>
+  <div class="apply-list">
+    <div ng-repeat='x in applys'>
+      <div id="$index" class="apply-item" >
+          <span>
+            {{x.email}}
+          </span>
+        <div class="apply-dec" >
+          <div class='apply-sign'>
+            <a ng-click='approve(x.email)'><i class="fa fa-check-circle" style="color:green; font-size:1.1em;"></i></a>
+            <a ng-click='refuse()'><i class="fa fa-times-circle" style="color:red; font-size:1.1em;"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#/home">
+    <div class="apply-out">
+      Log out to Home
+    </div>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+</div>

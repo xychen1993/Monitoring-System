@@ -1,0 +1,19 @@
+.sms-signup{
+  width: 300px;
+  letter-spacing: 0.5px;
+  height: auto;
+  margin: 0 auto;
+  text-align: left;
+  overflow: auto;
+}
+
+.sms-sign{
+  width: 150px;
+  height: 30px;
+}
+
+.sign-item span{
+  font-size: .8em;
+  display: block;
+  width: 100px;
+}

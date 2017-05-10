@@ -1,0 +1,20 @@
+<div class="e-container" ng-controller='applyController'>
+ <div class="e-name">
+   Apply For an Account
+ </div>
+ <hr class="e-line">
+ <div class="sms-signup">
+   <div class="sign-item" novalidate>
+     <span>Email</span>
+     <input class='sms-input sms-sign' type="email" name="username" ng-model='newuser.email'><br>
+   </div>
+   <div class="sign-item">
+     <span>Password</span>
+     <input class='sms-input sms-sign' type="password" name="psw" ng-model='newuser.password'>
+   </div>
+
+     <button class='sms-button' type="button" name="button" ng-click='submit()'>Submit</button>
+     <a href="#/home"><button class='sms-button' type="button" name="button">Back</button></a>
+
+ </div>
+</div>
