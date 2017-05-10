@@ -199,18 +199,7 @@
           </video> -->
           <div class="video-title">No Video Selected</div><div class="timeframe-title"></div>
           <div class="col s12 m8 l8 videoFrame">
-            <!-- <div class="videodiv">
-              <video width="100%" height="100%"  controls poster="" id="myVideo1">
-                <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-              </video><br>
-              <label>TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST</label>
-            </div>
-            <div class="videodiv">
-              <video width="100%" height="100%"  controls poster="" id="myVideo1">
-                <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-              </video><br>
-              <label>TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST</label>
-            </div> -->
+            
           </div>
           <div class="col s12 m4 l4 videoList" id="videoListId">
 
