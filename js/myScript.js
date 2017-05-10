@@ -11,9 +11,9 @@ $('input[name=bn]').click(function() {
   $('#building').html("Building: #" + $('input[name=bn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
 });
 
-// $('input[name=rn]').click(function() {
-//   $('#room').html("Room: #" + $('input[name=rn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
-// });
+$('input[name=rn]').click(function() {
+  $('#room').html("Room: #" + $('input[name=rn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
+});
 
 $('input[name=kn]').click(function() {
   // alert("test");
@@ -235,7 +235,7 @@ for(var i in myDic){
 //
 //
 //
-// 
+//
 //
 //
 //

@@ -199,7 +199,39 @@
           </video> -->
           <div class="video-title">No Video Selected</div><div class="timeframe-title"></div>
           <div class="col s12 m8 l8 videoFrame">
-            <video width="100%" height="100%"  controls poster="" id="myVideo">
+            <video width="40%" height="40%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
+              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+            </video>
+            <video width="25%" height="25%"  controls poster="" id="myVideo">
               <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
               <!-- <source src="movie.ogg" type="video/ogg"> -->
             </video>
