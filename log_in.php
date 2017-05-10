@@ -1,6 +1,8 @@
 <?php
 
+// $link = mysqli_connect($_SERVER["SERVER_ADDR"], "root", "123456", "kinectdata");
 $link = mysqli_connect("nefertari.iems.northwestern.edu", "root", "123456", "kinectdata");
+
 if (mysqli_connect_error()){
     $response = false;
 }

@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("129.105.36.210", "root", "123456", "kinectdata");
+$link = mysqli_connect($_SERVER[SERVER_ADDR], "root", "123456", "kinectdata");
 if (mysqli_connect_error()){
     die("Could not connect to Database");
 }

@@ -195,6 +195,6 @@ function zoomChart() {
 
 window.onload = function(){
    var find_tag = document.getElementsByTagName("a")[6]
-   // find_tag.style.visibility = "hidden"
+   find_tag.style.visibility = "hidden"
 };
 // console.log(qVResult)
