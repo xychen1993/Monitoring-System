@@ -46,7 +46,7 @@ if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
       //$(".videoList").append("<li><a href=./video/lalala> lalala </a></li>");
       $(".videoList").append("<li><a href='" +'./video/' + qVResult[i].fileName+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='40%' height='40%' controls poster='' id='myVideo'><source src=" + qVResult[i].fileName + " type='video/mp4' id='source'></video>");
+      $(".videoFrame").append("<video width='40%' height='40%' controls poster='' id='myVideo'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {

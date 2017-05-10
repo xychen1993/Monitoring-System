@@ -201,19 +201,8 @@
           <div class="col s12 m8 l8 videoFrame">
             <!-- <video width="40%" height="40%"  controls poster="" id="myVideo1">
               <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-            </video>
-            <video width="40%" height="40%"  controls poster="" id="myVideo2">
-              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-
-            </video>
-            <video width="40%" height="40%"  controls poster="" id="myVideo3">
-              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-
-            </video>
-            <video width="40%" height="40%"  controls poster="" id="myVideo4">
-              <source src="./video/100_0_2014_11_22_17_30_15.mp4" type="video/mp4" id="source">
-
-            </video> -->
+            </video><br>
+            <label>Test</label> -->
           </div>
           <div class="col s12 m4 l4 videoList" id="videoListId">
 
