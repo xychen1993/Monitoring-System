@@ -40,12 +40,19 @@
   }
 
 
+  // $query = "SELECT buildingId,roomId,kinectId,startTime, endTime, fileName FROM webtest2
+  // WHERE buildingId = '$bn'
+  // AND roomId ='$rn'
+  // AND kinectId = '$kn'
+  // AND startTime >= '$from'
+  // AND endTime <=  '$to'
+  // AND endTime != '0000-00-00 00:00:00'";
   $query = "SELECT buildingId,roomId,kinectId,startTime, endTime, fileName FROM webtest2
-  WHERE buildingId = '$bn'
-  AND roomId ='$rn'
-  AND kinectId = '$kn'
-  AND startTime >= '$from'
-  AND endTime <=  '$to'
+  WHERE buildingId = '2'
+  AND roomId ='1'
+  AND kinectId = '1'
+  AND startTime >= '2010-05-01'
+  AND endTime <=  '2017-05-01'
   AND endTime != '0000-00-00 00:00:00'";
   if($result=mysqli_query($link,$query)){
       while($row = mysqli_fetch_array($result)){

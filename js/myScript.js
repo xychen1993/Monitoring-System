@@ -44,13 +44,13 @@ var $form = $("#myForm");
 $(".videoList").empty();
 if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
-      //$(".videoList").append("<li><a href=./video/lalala> lalala </a></li>");
-      $(".videoList").append("<li><a href='" +'./video/' + qVResult[i].fileName+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='40%' height='40%' controls poster='' id='myVideo'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='source'></video>");
+      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "'>" + qVResult[i].fileName+"</a></li>");
+      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {
           links[i].onclick = handler;
+
       }
     }
   } else {
@@ -66,17 +66,11 @@ $videoLink.click(function() {
 });
 
 function handler(e) {
-  // prevent the full screen play video
-  e.preventDefault();
-  videoPath = this.getAttribute("href");
-  video = document.querySelector("video");
-  video.removeAttribute("poster");
-  source = document.querySelectorAll("video source");
-  source.src = videoPath;
-  document.getElementById("source").setAttribute("src",source.src ) ;
-  video.load();
-  video.play();
+  var videoPath = this.getAttribute("name");
+  document.getElementById(this.getAttribute("name") + "source").setAttribute("src", "./video/" + videoPath);
+  document.getElementById(this.getAttribute("name")).load();
 }
+
 
 // qEResult
 

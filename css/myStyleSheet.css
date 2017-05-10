@@ -189,3 +189,10 @@ video{
   padding: 0;
 
 }
+
+
+.videodiv{
+  background-color: red;
+  width: 40%;
+  overflow: hidden;
+}
