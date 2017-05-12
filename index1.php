@@ -12,7 +12,9 @@
      <!-- myStyleSheet -->
      <link type="text/css" rel="stylesheet" href="css/myStyleSheet.css"  media="screen,projection"/>
      <link rel="stylesheet" href="css/main.css">
-     <!-- dateTime -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    <!-- dateTime -->
      <!-- <link href = "jqueryUI/jquery-ui.min.css" rel="stylesheet"> -->
      <!-- <link href = "datetime/jquery-ui-timepicker-addon.css" rel="stylesheet"> -->
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -197,7 +199,7 @@
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
           </video> -->
-          <div class="video-title">No Video Selected</div><div class="timeframe-title"></div>
+          <div class="video-title" >No Video Selected</div><div class="timeframe-title"></div>
           <div class="col s12 m8 l8 videoFrame">
             
           </div>
@@ -236,7 +238,7 @@
 
     <!--Import jQuery before materialize.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="jqueryUI/jquery-ui.js"></script>
+    <!-- <script type="text/javascript" src="jqueryUI/jquery-ui.js"></script> -->
     <!-- dateTime -->
     <!-- <script type="text/javascript" src="datetime/jquery-ui-timepicker-addon.js"></script> -->
     <!-- <script type='text/javascript' src='datetime/jquery-ui-sliderAccess.js'></script> -->

@@ -44,18 +44,18 @@ var $form = $("#myForm");
 $(".videoList").empty();
 if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
-      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "'>" + qVResult[i].fileName+"</a></li>");
+      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
       $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {
           links[i].onclick = handler;
-
       }
     }
   } else {
       $(".videoList").append("<li>There are no videos available for this time</li>");
   }
+$('[data-toggle="tooltip"]').tooltip()
 
 var $videoLink = $("#videoListId li a");
 var $videoTitle = $(".video-title");
@@ -71,7 +71,6 @@ function handler(e) {
 
 
 // qEResult
-
 function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
