@@ -7,19 +7,19 @@ $('.button-collapse').sideNav({
 
 
 // sideNav title number
-$('input[name=bn]').click(function() {
-  $('#building').html("Building: #" + $('input[name=bn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
-});
-
-$('input[name=rn]').click(function() {
-  $('#room').html("Room: #" + $('input[name=rn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
-});
-
-$('input[name=kn]').click(function() {
-  // alert("test");
-  // console.log($('#kinect').html());
-  $('#kinect').html("Kinect: #" + $('input[name=kn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
-});
+// $('input[name=bn]').click(function() {
+//   $('#building').html("Building: #" + $('input[name=bn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
+// });
+//
+// $('input[name=rn]').click(function() {
+//   $('#room').html("Room: #" + $('input[name=rn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
+// });
+//
+// $('input[name=kn]').click(function() {
+//   // alert("test");
+//   // console.log($('#kinect').html());
+//   $('#kinect').html("Kinect: #" + $('input[name=kn]:checked').val()+  "<i class='mdi-navigation-arrow-drop-down'></i>")
+// });
 
 
 
@@ -45,7 +45,7 @@ $(".videoList").empty();
 if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
       $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
+      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=~/../../hospital/HospitalData/Falls1/2016-12-15/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {

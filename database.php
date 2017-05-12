@@ -12,9 +12,14 @@
     }
   }
 
-  $bn = $_POST['bn'];
-  $rn = $_POST['rn'];
-  $kn = $_POST['kn'];
+  $bn1 = $_POST['bn1'];
+  $bn2 = $_POST['bn2'];
+  $bn3 = $_POST['bn3'];
+  $rn1 = $_POST['rn1'];
+  $rn2 = $_POST['rn2'];
+  $rn3 = $_POST['rn3'];
+  $kn1 = $_POST['kn1'];
+  $kn2 = $_POST['kn2'];
   $fd = $_POST['fromDate'];
   $ft = $_POST['fromTime'];
   $td = $_POST['toDate'];
@@ -41,9 +46,9 @@
 
 
   $query = "SELECT buildingId,roomId,kinectId,startTime, endTime, fileName FROM webtest2
-  WHERE buildingId = '$bn'
-  AND roomId ='$rn'
-  AND kinectId = '$kn'
+  WHERE (buildingId = '$bn1' OR buildingId = '$bn2' OR buildingId = '$bn3')
+  AND (roomId ='$rn1' OR roomId = '$rn2' OR roomId = '$rn3')
+  AND (kinectId = '$kn1' OR kinectId = '$kn2')
   AND startTime >= '$from'
   AND endTime <=  '$to'
   AND endTime != '0000-00-00 00:00:00'";

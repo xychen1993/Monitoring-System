@@ -72,15 +72,15 @@
                   <div class="collapsible-body">
                     <ul class="subGroup dropdown-content" id='building-dropdown'>
                       <li>
-                      <input class="with-gap" name="bn" type="radio" id="test1" value="1"/>
+                      <input class="with-gap" name="bn1" type="checkbox" id="test1" value="1"/>
                       <label for="test1">Building #1</label>
                       </li>
                       <li>
-                        <input class="with-gap" name="bn" type="radio" id="test2" value="2"/>
+                        <input class="with-gap" name="bn2" type="checkbox" id="test2" value="2"/>
                         <label for="test2">Building #2</label>
                       </li>
                       <li>
-                        <input class="with-gap" name="bn" type="radio" id="test3"  value="3"/>
+                        <input class="with-gap" name="bn3" type="checkbox" id="test3"  value="3"/>
                         <label for="test3">Building #3</label>
                       </li>
                     </ul>
@@ -97,15 +97,15 @@
                   <div class="collapsible-body">
                     <ul class="subGroup dropdown-content" id='room-dropdown'>
                       <li>
-                      <input class="with-gap" name="rn" type="radio" id="rn1" value="1"/>
+                      <input class="with-gap" name="rn1" type="checkbox" id="rn1" value="1"/>
                       <label for="rn1">Room #1</label>
                       </li>
                       <li>
-                        <input class="with-gap" name="rn" type="radio" id="rn2" value="2"/>
+                        <input class="with-gap" name="rn2" type="checkbox" id="rn2" value="2"/>
                         <label for="rn2">Room #2</label>
                       </li>
                       <li>
-                        <input class="with-gap" name="rn" type="radio" id="rn3"  value="3"/>
+                        <input class="with-gap" name="rn3" type="checkbox" id="rn3"  value="3"/>
                         <label for="rn3">Room #3</label>
                       </li>
                     </ul>
@@ -122,11 +122,11 @@
                   <div class="collapsible-body">
                     <ul class="subGroup dropdown-content" id='kinect-dropdown'>
                       <li>
-                      <input class="with-gap" name="kn" type="radio" id="kn1" value="1"/>
+                      <input class="with-gap" name="kn1" type="checkbox" id="kn1" value="1"/>
                       <label for="kn1">Kinect #1</label>
                       </li>
                       <li>
-                        <input class="with-gap" name="kn" type="radio" id="kn2" value="2"/>
+                        <input class="with-gap" name="kn2" type="checkbox" id="kn2" value="2"/>
                         <label for="kn2">Kinect #2</label>
                       </li>
                     </ul>
@@ -199,7 +199,7 @@
           </video> -->
           <div class="video-title">No Video Selected</div><div class="timeframe-title"></div>
           <div class="col s12 m8 l8 videoFrame">
-            
+
           </div>
           <div class="col s12 m4 l4 videoList" id="videoListId">
 
