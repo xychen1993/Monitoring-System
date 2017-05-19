@@ -212,8 +212,8 @@
                   <div class="collapsible-body">
                     <ul class="subGroup dropdown-content" id='number-of-videos'>
                       <li>
-                      <input class="with-gap" name="bn1" type="radio" id="test1" value="2"/>
-                      <label for="test1">2</label>
+                        <input class="with-gap" name="bn1" type="radio" id="test1" value="2"/>
+                        <label for="test1">2</label>
                       </li>
                       <li>
                         <input class="with-gap" name="bn2" type="radio" id="test2" value="4"/>
@@ -225,9 +225,9 @@
                       </li>
                     </ul>
                   </div>
-            
-            
-            
+
+
+
 
           <!-- </div> -->
           <div class="col s12 m8 l8 videoFrame">
