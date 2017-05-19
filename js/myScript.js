@@ -105,3 +105,13 @@ for(var i in myDic){
     "</li>"
 );
 }
+
+function numofvideos(num){
+  console.log('enter');
+  var playerList = document.getElementById("videoListId");
+  var links = playerList.getElementsByTagName('a');
+  $(".videoFrame").empty();
+  for(var i = 0; i < links.length; i ++){
+    $(".videoFrame").append("<video width='" + 100 / num + "%' height='" + 100 / num + "%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
+  }
+}
