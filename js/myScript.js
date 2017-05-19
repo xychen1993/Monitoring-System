@@ -119,3 +119,12 @@ function numofvideos(num){
     $(".videoFrame").append("<video width='" + 100 / num + "%' height='" + 100 / num + "%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
   }
 }
+
+
+var live = document.getElementById('live');
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+        live.src = window.URL.createObjectURL(stream);
+        live.play();
+    });
+}

@@ -248,6 +248,12 @@
     </div>
 
 
+
+    <video id="live" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+
     <!--Import jQuery before materialize.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- <script type="text/javascript" src="jqueryUI/jquery-ui.js"></script> -->
