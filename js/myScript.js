@@ -44,8 +44,9 @@ var $form = $("#myForm");
 $(".videoList").empty();
 if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
-      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=~/../../hospital/HospitalData/Falls1/2016-12-15/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
+      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" Start Time:" + qVResult[i].startTime + " End Time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName +"</a></li>");
+      // $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=~/../../hospital/HospitalData/Falls1/2016-12-15/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video
+      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
 
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
