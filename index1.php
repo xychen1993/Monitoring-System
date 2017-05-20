@@ -207,27 +207,10 @@
               <option value="6">6</option>
             </select>
 
-            <!--  <a id="building" class='dropdown-button btn' href='#' data-activates='number-of-videos' style="margin-top: 1.5%;margin-left: 1%;width: 20%">Number of Videos
-             <i class="mdi-navigation-arrow-drop-down"></i></a>
-                  <div class="collapsible-body">
-                    <ul class="subGroup dropdown-content" id='number-of-videos'>
-                      <li>
-                      <input onclick="numofvideos(2)" class="with-gap" name="bn1" type="radio" id="test1" value="2"/>
-                      <label for="test1">2</label>
-                      </li>
-                      <li>
-                        <input onclick="numofvideos(2)" class="with-gap" name="bn2" type="radio" id="test2" value="4"/>
-                        <label for="test2">4</label>
-                      </li>
-                      <li>
-                        <input onclick="numofvideos(2)" class="with-gap" name="bn3" type="radio" id="test3"  value="6"/>
-                        <label for="test3">6</label>
-                      </li>
-                    </ul>
-                  </div>
-            -->
 
-          <!-- </div> -->
+
+
+
           <div class="col s12 m8 l8 videoFrame">
 
           </div>
@@ -263,6 +246,12 @@
         </div>
       </div>
     </div>
+
+
+
+    <video id="live" width="640" height="480" autoplay></video>
+    <button id="snap">Snap Photo</button>
+    <canvas id="canvas" width="640" height="480"></canvas>
 
 
     <!--Import jQuery before materialize.js-->
