@@ -45,7 +45,7 @@ $(".videoList").empty();
 if (qVResult.length) {
     for(i=0 ; i<qVResult.length ;i++){
       $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=../../../../../hospital/HospitalData/Falls1/2016-12-15/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
+      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4; codecs=avc1.4D401E,mp4a.40.2' id='" + qVResult[i].fileName + "source'><object width='50%' height='50%' type='application/x-shockwave-flash' data='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='movie' value='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='allowfullscreen' value='true'><param name='flashvars' value='config={'clip': {'url': 'http://alphahinex.github.io/archives/html5-video/mov-h264_main_30-aac_lc.mp4', 'autoPlay': false, 'autoBuffering': true}}'></object></video>");
 
       // $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" Start Time:" + qVResult[i].startTime + " End Time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName +"</a></li>");
       // // $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=~/../../hospital/HospitalData/Falls1/2016-12-15/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video
@@ -116,6 +116,6 @@ function numofvideos(num){
   var links = playerList.getElementsByTagName('a');
   $(".videoFrame").empty();
   for(var i = 0; i < links.length; i ++){
-    $(".videoFrame").append("<video width='" + 100 / num + "%' height='" + 100 / num + "%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4' id='" + qVResult[i].fileName + "source'></video>");
+    $(".videoFrame").append("<video width='"+ 100 / num +"%' height='"+ 100 / num +"%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./video/" + qVResult[i].fileName + " type='video/mp4; codecs=avc1.4D401E,mp4a.40.2' id='" + qVResult[i].fileName + "source'><object width='50%' height='50%' type='application/x-shockwave-flash' data='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='movie' value='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='allowfullscreen' value='true'><param name='flashvars' value='config={'clip': {'url': 'http://alphahinex.github.io/archives/html5-video/mov-h264_main_30-aac_lc.mp4', 'autoPlay': false, 'autoBuffering': true}}'></object></video>");
   }
 }
