@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<?php 
+<?php
 if(isSet($_GET['id'])){
   $videoName = $_GET['id'];
   echo $videoName;
@@ -13,9 +13,9 @@ if(isSet($_GET['id'])){
 $dir = "/var/www/html/web2017/project/temp_video";
 if( !file_exists($dir)) {
   echo "in";
-  $oldmask = umask(0);  // helpful when used in linux server  
+  $oldmask = umask(0);  // helpful when used in linux server
   $res = mkdir($dir, 0744);
-  echo $res;  
+  echo $res;
 }
 
 else {
