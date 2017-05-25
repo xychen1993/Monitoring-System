@@ -136,8 +136,8 @@ $('.videoFrame').scroll(function() {
               if(transferred[i] == $this.context.id) return ;
             }
             transferred.push($this.context.id);
-            $('#videoList').append("<a href='converter.php?id=" + $this.context.id + "'></a>");
-            $('#videoList').find('a').each().click();
+            $('.videoList').append("<a class='converter' href='converter.php?id=" + $this.context.id + "'>test</a>");
+            $.ajax({ url: "converter.php?id=" + $this.context.id});
             console.log($this.context.id);
             console.log(transferred.length);
           }
