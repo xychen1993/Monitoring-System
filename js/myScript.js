@@ -122,7 +122,9 @@ function numofvideos(num){
 
 
 var live = document.getElementById('live');
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+var curUrl = window.location.pathname;
+console.log(curUrl)
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && curUrl == '/live_stream.php') {
     navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
         live.src = window.URL.createObjectURL(stream);
         live.play();

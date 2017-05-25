@@ -32,6 +32,25 @@
 	padding-right: 20px;
 	}
 
+  #liveButton{
+  color: #fff;
+  background:#512da8;
+  display: inline-block;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
+  #searchHistoryButton{
+  color: #fff;
+  background:rgb(51,15,138);
+
+  display: inline-block;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
 </style>
 
   <body >
@@ -59,6 +78,9 @@
 </g>
 </svg><span>virtual</span>sitter</a>
 <a id='logOut' href='index.html'>LOG OUT</a>
+<a id='liveButton' href='live_stream.php'>Live</a>
+<a id='searchHistoryButton' href='index1.php'>Search History</a>
+
 <!--        <ul id="nav-mobile" class="right ">
          <li id="iconList"><i class="small material-icons" id="setIcon">settings</i></li>
        </ul> -->
@@ -246,12 +268,6 @@
         </div>
       </div>
     </div>
-
-
-
-    <video id="live" width="640" height="480" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
 
 
     <!--Import jQuery before materialize.js-->
