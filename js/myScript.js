@@ -124,3 +124,24 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && curUrl == '/
         live.play();
     });
 }
+transferred = [];
+var time = 0;
+$('.videoFrame').scroll(function() {
+    var $videoframe = $(this);
+    if($videoframe.scrollTop() > time * 0.0001 * $videoframe.height()){
+      $videoframe.find('video').each(function(n){
+          var $this = $(this);
+          if ($this.position().top + $this.height() > 0 && $this.position().top < $videoframe.height()){
+            for(var i = 0 ; i < transferred.length; i ++){
+              if(transferred[i] == $this.context.id) return ;
+            }
+            transferred.push($this.context.id);
+            $('#videoList').append("<a href='converter.php?id=" + $this.context.id + "'></a>");
+            $('#videoList').find('a').each().click();
+            console.log($this.context.id);
+            console.log(transferred.length);
+          }
+      });
+      time ++;
+    }
+});
