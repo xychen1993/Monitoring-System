@@ -18,6 +18,7 @@ if( !file_exists($dir)) {
   $res = mkdir($dir, 0744);
   echo $res;
 }
+
 else {
   $files = glob($dir."/*"); // get all file names
   foreach($files as $file){ // iterate files
@@ -34,7 +35,6 @@ $cmd = "$ffmpeg -i $videoFile $newvideoFile";
 shell_exec($cmd);
 
 echo "Load video successfully!";
-
 ?>
 
 
