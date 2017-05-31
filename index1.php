@@ -159,6 +159,48 @@
               </ul>
             </li>
 
+            <!-- curtain status -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a id="curtain" class='dropdown-button btn' href='#' data-activates='curtain-dropdown'>Cutain Status<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body">
+                    <ul class="subGroup dropdown-content" id='curtain-dropdown'>
+                      <li>
+                        <input class="with-gap" name="curopen" type="checkbox" id="curopen" value="curopen"/>
+                        <label for="curopen">Curtain Opened</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="curclose" type="checkbox" id="curclose" value="curclose"/>
+                        <label for="curclose">Curtain Closed</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+
+            <!-- bed status -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li>
+                  <a id="bed" class='dropdown-button btn' href='#' data-activates='bed-dropdown'>Bed Status<i class="mdi-navigation-arrow-drop-down"></i></a>
+                  <div class="collapsible-body">
+                    <ul class="subGroup dropdown-content" id='bed-dropdown'>
+                      <li>
+                        <input class="with-gap" name="bedfull" type="checkbox" id="bedfull" value="bedfull"/>
+                        <label for="bedfull">Bed Full</label>
+                      </li>
+                      <li>
+                        <input class="with-gap" name="bedemp" type="checkbox" id="bedemp" value="bedemp"/>
+                        <label for="bedemp">Bed Empty</label>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
 
             <!-- time -->
             <li class="no-padding">
