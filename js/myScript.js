@@ -47,7 +47,7 @@ if (qVResult.length) {
       var newname = nameconvert(qVResult[i].fileName);
       newname += ".mp4";
       $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; codecs=avc1.4D401E,mp4a.40.2' id='" + qVResult[i].fileName + "source'><object width='50%' height='50%' type='application/x-shockwave-flash' data='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='movie' value='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='allowfullscreen' value='true'><param name='flashvars' value='config={'clip': {'url': 'http://alphahinex.github.io/archives/html5-video/mov-h264_main_30-aac_lc.mp4', 'autoPlay': false, 'autoBuffering': true}}'></object></video>");
+      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {
@@ -136,22 +136,23 @@ $('.videoFrame').scroll(function() {
       $videoframe.find('video').each(function(n){
           var $this = $(this);
           if ($this.position().top + $this.height() > 0 && $this.position().top < $videoframe.height()){
+            if(transferred.length > 8) transferred = [];
             for(var i = 0 ; i < transferred.length; i ++){
               if(transferred[i] == $this.context.id) return ;
             }
             transferred.push($this.context.id);
             // console.log(nameconvert($this.context.id));
-            // $('.videoList').append("<a class='converter' href='converter.php?id=" + $this.context.id + "'>test</a>");
+            $('.videoList').append("<a class='converter' href='converter.php?id=" + $this.context.id + "'>test</a>");
             $.ajax({ url: "converter.php?id=" + $this.context.id});
             // console.log($this.context.id);
             // console.log(transferred.length);
-            $(".videoList").empty();
+            $(".videoFrame").empty();
             if (qVResult.length) {
                 for(i=0; i < qVResult.length ;i++){
                   var newname = nameconvert(qVResult[i].fileName);
                   newname += ".mp4";
-                  $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
-                  $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; codecs=avc1.4D401E,mp4a.40.2' id='" + qVResult[i].fileName + "source'><object width='50%' height='50%' type='application/x-shockwave-flash' data='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='movie' value='http://releases.flowplayer.org/swf/flowplayer-3.2.16.swf'><param name='allowfullscreen' value='true'><param name='flashvars' value='config={'clip': {'url': 'http://alphahinex.github.io/archives/html5-video/mov-h264_main_30-aac_lc.mp4', 'autoPlay': false, 'autoBuffering': true}}'></object></video>");
+
+                  $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
                   var playerList = document.getElementById("videoListId");
                   var links = playerList.getElementsByTagName('a');
                   for (var i=0; i<links.length; i++) {
