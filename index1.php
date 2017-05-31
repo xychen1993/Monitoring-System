@@ -14,6 +14,7 @@
      <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+     <script src="https://code.jquery.com/jquery-2.2.2.min.js" crossorigin="anonymous"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    <!-- dateTime -->
      <!-- <link href = "jqueryUI/jquery-ui.min.css" rel="stylesheet"> -->
      <!-- <link href = "datetime/jquery-ui-timepicker-addon.css" rel="stylesheet"> -->
@@ -276,7 +277,7 @@
 
 
           <div class="col s12 m8 l8 videoFrame">
-
+            
           </div>
           <div class="col s12 m4 l4 videoList" id="videoListId">
 

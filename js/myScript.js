@@ -46,8 +46,8 @@ if (qVResult.length) {
     for(i=0; i < qVResult.length ;i++){
       var newname = nameconvert(qVResult[i].fileName);
       newname += ".mp4";
-      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime+ "'>" + qVResult[i].fileName+"</a></li>");
-      $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
+      $(".videoList").append("<li><a name='" + qVResult[i].fileName + "' href='#" + qVResult[i].fileName + "' data-toggle='tooltip' title='Building: " + qVResult[i].buildingId + " Room:" + qVResult[i].roomId + " Kinect:" + qVResult[i].kinectId +" start time:" + qVResult[i].startTime + " end time:" + qVResult[i].endTime + "'>" + qVResult[i].fileName + "</a></li>");
+      $(".videoFrame").append("<video width='50%' height='50%' data-toggle='tooltip' title='Name: " + qVResult[i].fileName + ", Building: " + qVResult[i].buildingId + ", Room: " + qVResult[i].roomId + ", Kinect: " + qVResult[i].kinectId + ", Start Time: " + qVResult[i].startTime + ", End Time: " + qVResult[i].endTime + "' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
       var playerList = document.getElementById("videoListId");
       var links = playerList.getElementsByTagName('a');
       for (var i=0; i<links.length; i++) {
@@ -57,7 +57,7 @@ if (qVResult.length) {
   } else {
       $(".videoList").append("<li>There are no videos available for this time</li>");
   }
-$('[data-toggle="tooltip"]').tooltip();
+// $('[data-toggle="tooltip"]').tooltip();
 
 var $videoLink = $("#videoListId li a");
 var $videoTitle = $(".video-title");
@@ -130,43 +130,43 @@ if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && curUrl == '/
 }
 transferred = [];
 var time = 0;
-$('.videoFrame').scroll(function() {
-    var $videoframe = $(this);
-    if($videoframe.scrollTop() > time * 0.0001 * $videoframe.height()){
-      $videoframe.find('video').each(function(n){
-          var $this = $(this);
-          if ($this.position().top + $this.height() > 0 && $this.position().top < $videoframe.height()){
-            if(transferred.length > 8) transferred = [];
-            for(var i = 0 ; i < transferred.length; i ++){
-              if(transferred[i] == $this.context.id) return ;
-            }
-            transferred.push($this.context.id);
-            // console.log(nameconvert($this.context.id));
-            $('.videoList').append("<a class='converter' href='converter.php?id=" + $this.context.id + "'>test</a>");
-            $.ajax({ url: "converter.php?id=" + $this.context.id});
-            // console.log($this.context.id);
-            // console.log(transferred.length);
-            $(".videoFrame").empty();
-            if (qVResult.length) {
-                for(i=0; i < qVResult.length ;i++){
-                  var newname = nameconvert(qVResult[i].fileName);
-                  newname += ".mp4";
-
-                  $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
-                  var playerList = document.getElementById("videoListId");
-                  var links = playerList.getElementsByTagName('a');
-                  for (var i=0; i<links.length; i++) {
-                      links[i].onclick = handler;
-                  }
-                }
-              } else {
-                  $(".videoList").append("<li>There are no videos available for this time</li>");
-              }
-          }
-      });
-      time ++;
-    }
-});
+// $('.videoFrame').scroll(function() {
+//     var $videoframe = $(this);
+//     if($videoframe.scrollTop() > time * 0.0001 * $videoframe.height()){
+//       $videoframe.find('video').each(function(n){
+//           var $this = $(this);
+//           if ($this.position().top + $this.height() > 0 && $this.position().top < $videoframe.height()){
+//             if(transferred.length > 8) transferred = [];
+//             for(var i = 0 ; i < transferred.length; i ++){
+//               if(transferred[i] == $this.context.id) return ;
+//             }
+//             transferred.push($this.context.id);
+//             // console.log(nameconvert($this.context.id));
+//             $('.videoList').append("<a class='converter' href='converter.php?id=" + $this.context.id + "'>test</a>");
+//             $.ajax({ url: "converter.php?id=" + $this.context.id});
+//             // console.log($this.context.id);
+//             // console.log(transferred.length);
+//             $(".videoFrame").empty();
+//             if (qVResult.length) {
+//                 for(i=0; i < qVResult.length ;i++){
+//                   var newname = nameconvert(qVResult[i].fileName);
+//                   newname += ".mp4";
+//
+//                   $(".videoFrame").append("<video width='50%' height='50%' autoplay controls poster='' id='" + qVResult[i].fileName + "'><source src=./temp_video/" + newname + " type='video/mp4; id='" + qVResult[i].fileName + "source'></video>");
+//                   var playerList = document.getElementById("videoListId");
+//                   var links = playerList.getElementsByTagName('a');
+//                   for (var i=0; i<links.length; i++) {
+//                       links[i].onclick = handler;
+//                   }
+//                 }
+//               } else {
+//                   $(".videoList").append("<li>There are no videos available for this time</li>");
+//               }
+//           }
+//       });
+//       time ++;
+//     }
+// });
 
 function nameconvert(name){
   return name.replace(/.mp4/, "");
