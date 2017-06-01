@@ -26,6 +26,10 @@
   $tt = $_POST['toTime'];
   $from = $fd.' '.$ft;
   $to = $td.' '.$tt;
+  $bedfull = $_POST['bedfull'];
+  $bedemp = $_POST['bedemp'];
+  $curopen = $_POST['curopen'];
+  $curclose = $_POST['curclose'];
   $qVResult= array();
   $qEResult= array();
   function do_compare($item1, $item2) {
@@ -51,6 +55,8 @@
   AND (kinectId = '$kn1' OR kinectId = '$kn2')
   AND startTime >= '$from'
   AND endTime <=  '$to'
+  AND (bedStatus = '$bedfull' OR bedStatus = '$bedemp')
+  AND (curtainStatus = '$curopen' OR curtainStatus = '$curclose')
   AND endTime != '0000-00-00 00:00:00'";
   // $query = "SELECT buildingId,roomId,kinectId,startTime, endTime, fileName FROM webtest2
   // WHERE buildingId = '2'

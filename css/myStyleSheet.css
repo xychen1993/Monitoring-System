@@ -5,6 +5,7 @@
   margin-bottom:0;
 }
 
+
 #iconList{
   height:30px;
 }
@@ -128,6 +129,11 @@
   overflow-x: scroll;
   overflow-y: scroll;
 
+}
+.half{
+  width: 40%;
+  /*border: 5px solid red;*/
+  word-wrap: break-word;
 }
 
 video{
