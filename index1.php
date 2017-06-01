@@ -221,7 +221,7 @@
             <source src="movie.mp4" type="video/mp4">
             <source src="movie.ogg" type="video/ogg">
           </video> -->
-          <div class="video-title" >Number of Columns</div>
+          <div class="video-title" >Search Results</div>
             <select class="timeframe-title" onchange="numofvideos(this.value);">
               <option value="2" >Number of Columns</option>
               <option value="2" >2</option>
