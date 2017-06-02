@@ -52,7 +52,7 @@
 
 </style>
 
-  <body >
+<body>
     <?php include 'database.php';?>
 
     <!-- whole nav bar: top and left -->
@@ -82,58 +82,25 @@
 <a id='searchHistoryButton' href='index1.php'>Search History</a>
         
 
-    <div id = "contentWrapper" ng-controller="appcontrol">
-      <div class="container">
-        <!-- offset if we use id the offset will not working -->
-        <div class="row">
-          <!-- <video width="320" height="240" autoplay>
-            <source src="movie.mp4" type="video/mp4">
-            <source src="movie.ogg" type="video/ogg">
-          </video> -->
-          
-
-          <div class="col s12 m8 l8 videoFrame" style = "margin-top: 10%">
-            <video id="live" width="640" height="480" autoplay></video>
-            <button id="snap">Snap Photo</button>
-            <canvas id="canvas" width="640" height="480"></canvas>
-
-          </div>
-          
-        </div>
-        <!-- charts part -->
-        <!-- <div class="row">
-          <div class="col s12 m8 l8 eventFrame" style="background-color:transparent">
-            <div id="graph" style = "position: relative; height: 100%">
-            <div id="chartdiv" style = "position: relative; height: 100%"></div>
-          </div>
-            <span class="flow-text">s12 m8 l8</span></div>
-          <div class="col s12 m4 l4 eventList">
-            <ul class="collapsible" data-collapsible="accordion" id="eventCollapse">
-             <li>
-               <div class="collapsible-header">First</div>
-               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-             </li>
-             <li>
-               <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-             </li>
-             <!-- <li>
-               <div class="collapsible-header">whatshot</div>
-               <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-             </li> -->
-            </ul>
-
-          </div>
-        </div> -->
-        </div>
-      </div>
+    
+<div id = "contentWrapper" ng-controller="appcontrol">
+  <div class="container" >
+    <div class="row" >
+      <select class="timeframe-title" onchange="numoflives(this.value);" style = "margin-top: 2%;margin-left: 50%">
+          <option value="2" >Number of Columns</option>
+          <option value="2" >2</option>
+          <option value="4" >4</option>
+          <option value="6">6</option>
+      </select>
     </div>
+    <div class="col s12 m8 l8 videoFrame" id = "lives" style="margin-left:-15%;width:100%;">
+      </div>
+  </div>
+</div>
+</nav>
 
 
 
-    <video id="live" width="640" height="480" autoplay></video>
-    <button id="snap">Snap Photo</button>
-    <canvas id="canvas" width="640" height="480"></canvas>
 
 
     <!--Import jQuery before materialize.js-->
@@ -156,5 +123,5 @@
 
 
 
-  </body>
+</body>
 </html>
