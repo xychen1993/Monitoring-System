@@ -87,7 +87,8 @@
   <div class="container" >
     <div class="row" >
       <select class="timeframe-title" onchange="numoflives(this.value);" style = "margin-top: 2%;margin-left: 50%">
-          <option value="2" >Number of Columns</option>
+          <option value="1" >Number of Columns</option>
+          <option value="1" >1</option>
           <option value="2" >2</option>
           <option value="4" >4</option>
           <option value="6">6</option>
